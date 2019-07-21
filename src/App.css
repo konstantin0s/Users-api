@@ -1,0 +1,83 @@
+body {
+    min-width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0 1rem;
+    min-width: 100%;
+}
+
+.header {
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+.form-group {
+    display: flex;
+}
+
+.form-control {
+    width: 65%;
+}
+
+.btn-primary {
+    display: inline-block;
+    float: right;
+    width: 34%;
+}
+
+.links {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+}
+
+.link {
+    color: white;
+    list-style: none;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 100%;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #EDE1E1;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin: 10px 5px;
+    box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    /* height: 5vh; */
+}
+
+.user:hover {
+    transform: scale(1.04);
+}
+
+.user li {
+    list-style: none;
+}
+
+.btn-danger {
+    width: 70%;
+}
+
+.footer-bottom {
+    position: fixed;
+    background: #333;
+    color: white;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
