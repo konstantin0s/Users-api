@@ -6,6 +6,7 @@ import axios from 'axios';
 import Users from './components/Users';
 import Header from './components/layout/Header';
 import AddUser from './components/AddUser';
+import OneUser from './components/OneUser';
 import Loading from './Loading';
 
 class App extends Component {
@@ -48,8 +49,10 @@ class App extends Component {
             }))
     }
 
+
     render() {
         let { isLoaded, items } = this.state;
+        console.log(items);
 
         if (!isLoaded) {
             return (
@@ -65,11 +68,24 @@ class App extends Component {
                                 <div className="container">
 
                                     <AddUser addUser={this.addUser} />
-                                    <Users items={this.state.items}
+                                    <Users items={items}
                                         delUser={this.delUser} />
+
+                                
                                 </div>
                             )} />
-                        </Switch>
+                
+
+                        <Route 
+        path="/one/:id" 
+        render={request => {
+          const id = request.match.params.id;
+          // console.log(id);
+          return <OneUser id={id} />;
+        }}
+      />
+
+</Switch>
                         <Route exact path="/about" component={About} />
                     </div>
                 </Router>

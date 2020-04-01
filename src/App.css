@@ -116,12 +116,18 @@ body {
 
 .btn-danger {
     position: relative;
-    top: -270px;
+    top: -204px;
     float: right;
-    right: -193px;
+    right: 1px;
     width: 14%;
     z-index: 30;
     border-radius: 50%;
+}
+
+.btn-success {
+    position: relative;
+    top: 1.4em;
+    left: 5.8em;
 }
 
 .btn-danger:hover {
@@ -137,6 +143,11 @@ body {
     z-index: 2;
     width: 100%;
     text-align: center;
+}
+
+.user a {
+    text-decoration: none;
+    color: #444;
 }
 
 .user li {
