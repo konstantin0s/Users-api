@@ -1,7 +1,20 @@
+:root {
+    --ease: all 0.5s ease-out;
+    --primary-color: #444;
+    --secondary-color: #eece1a;
+}
+
 body {
     min-width: 100%;
     padding: 0;
     overflow-x: hidden;
+}
+
+.user img {
+    border-radius: 50%;
+    width: 68%;
+    position: relative;
+    left: 1.2em;
 }
 
 .container {
@@ -13,6 +26,7 @@ body {
     background: #333;
     color: white;
     padding: 10px;
+    height: 5em;
 }
 
 .form-group {
@@ -33,6 +47,12 @@ body {
     display: flex;
     text-decoration: none;
     justify-content: space-evenly;
+    position: relative;
+    top: -60px;
+}
+
+.links a {
+    text-decoration: none;
 }
 
 .link {
@@ -40,19 +60,45 @@ body {
     list-style: none;
 }
 
+.link {
+    font-size: 1em;
+    border: 3px #fff solid;
+    padding: 1em 2.5em;
+    margin-bottom: 3rem;
+    transition: var(--ease);
+    position: relative;
+    top: 5px;
+}
+
+.flex {
+    margin-bottom: 10em;
+    position: relative;
+    z-index: 1;
+}
+
+.link:hover {
+    padding: 0.8rem 1.9rem;
+    background: var(--secondary-color);
+    color: var(--secondary-color);
+
+
+}
+
 .item {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     min-width: 100%;
+    grid-gap: 40px 10px;
 }
 
 .user {
     display: flex;
     flex-direction: column;
     width: 85%;
-    background-color: #EDE1E1;
+    height: 100%;
+    background-color: rgb(243, 232, 232);
     padding: 3px 8px;
-    border-radius: 3px;
+    border-radius: 50%;
     margin: 10px 5px;
     box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
     cursor: pointer;
@@ -69,7 +115,17 @@ body {
 }
 
 .btn-danger {
-    width: 70%;
+    position: relative;
+    top: -270px;
+    float: right;
+    right: -193px;
+    width: 14%;
+    z-index: 30;
+    border-radius: 50%;
+}
+
+.btn-danger:hover {
+    width: 14%;
 }
 
 .footer-bottom {
@@ -78,6 +134,14 @@ body {
     color: white;
     padding: 10px;
     bottom: 0;
+    z-index: 2;
     width: 100%;
     text-align: center;
+}
+
+.user li {
+    position: relative;
+    list-style: none;
+    left: 4em;
+    top: 1em;
 }

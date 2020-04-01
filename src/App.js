@@ -6,6 +6,7 @@ import axios from 'axios';
 import Users from './components/Users';
 import Header from './components/layout/Header';
 import AddUser from './components/AddUser';
+import Loading from './Loading';
 
 class App extends Component {
     constructor(props) {
@@ -52,7 +53,7 @@ class App extends Component {
 
         if (!isLoaded) {
             return (
-                <div className="container">Loading...</div>
+           <Loading />
             )
         } else {
             return (

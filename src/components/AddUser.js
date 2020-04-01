@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './css/adduser.css';
 
 class AddUser extends Component {
     constructor(props) {
@@ -25,7 +26,8 @@ class AddUser extends Component {
     render() {
         return (
             <div className="add">
-                <form onSubmit={this.handleSubmit}>
+                <form className="form-style-10" 
+                onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <input className="form-control" type="text" name="name"
                             placeholder="Add User..."
